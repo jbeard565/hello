@@ -8,11 +8,12 @@ class DumbStringTest {
 
 	@Test
 	void test() {
-		DumbString ds = new DumbString();
-		assertEquals("", ds.toString());
-		assertEquals("", ""+ds);
-		
-		assertEquals("asdf", new DumbString("asdf").toString());
+		DumbString dsEmpty = new DumbString();
+		assertEquals("", dsEmpty.toString());
+		assertEquals("", "" + dsEmpty);
+
+		DumbString ds2 = DumbString.from("this is a test");
+		assertEquals(DumbString.from("this is a test"), ds2);
 	}
 
 }
